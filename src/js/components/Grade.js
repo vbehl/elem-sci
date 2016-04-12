@@ -2,10 +2,9 @@ import React from 'react';
 
 export default class Grade extends React.Component{
   render(){
+    const {props: {grade:grade}} = this;
     return(
-      <li className="grade-list-item">
-        {`Grade ${this.props.grade}`}
-      </li>
+      <a className='grade' href={grade.url}>{`Grade ${grade.label}`}</a>
     )
   }
 }

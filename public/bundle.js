@@ -25130,7 +25130,7 @@
 
 	var _GradeSelector2 = _interopRequireDefault(_GradeSelector);
 
-	var _BookContainer = __webpack_require__(227);
+	var _BookContainer = __webpack_require__(229);
 
 	var _BookContainer2 = _interopRequireDefault(_BookContainer);
 
@@ -25143,13 +25143,21 @@
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
 	var books = [{
-	  title: "Fourth Grade Science"
+	  title: 'CK-12 First Grade Science',
+	  imageUrl: 'https://www.ck12.org/flx/show/THUMB_LARGE/cover%20page/user%3Ayxv0ag9ycy1kzxnay2sxmi5vcmc./3-1459204084-2-12-NGSS-g1.jpg'
+	}, {
+	  title: 'CK-12 Second Grade Science',
+	  imageUrl: 'https://www.ck12.org/flx/show/THUMB_LARGE/cover%20page/user%3Ayxv0ag9ycy1kzxnay2sxmi5vcmc./3-1459203973-32-17-NGSS-g2.jpg'
 
 	}, {
-	  title: "Fourth and Fifth Grade Science"
-
+	  title: 'CK-12 Third Science',
+	  imageUrl: 'https://www.ck12.org/flx/show/THUMB_LARGE/cover%20page/user%3Ayxv0ag9ycy1kzxnay2sxmi5vcmc./3-1459204173-53-51-NGSS-g3.jpg'
 	}, {
-	  title: "First Grade Science"
+	  title: 'CK-12 Fourth Grade Science',
+	  imageUrl: 'https://www.ck12.org/flx/show/THUMB_LARGE/cover%20page/user%3Ayxv0ag9ycy1kzxnay2sxmi5vcmc./3-1459198027-73-92-NGSS-g4-.jpg'
+	}, {
+	  title: 'CK-12 Fifth Grade Science',
+	  imageUrl: 'https://www.ck12.org/flx/show/THUMB_LARGE/cover%20page/user%3Ayxv0ag9ycy1kzxnay2sxmi5vcmc./3-1459197145-91-56-NGSS-g5-.jpg'
 	}];
 
 	var Home = function (_React$Component) {
@@ -25194,9 +25202,17 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _Grade = __webpack_require__(226);
+	var _Grades = __webpack_require__(226);
+
+	var _Grades2 = _interopRequireDefault(_Grades);
+
+	var _Grade = __webpack_require__(227);
 
 	var _Grade2 = _interopRequireDefault(_Grade);
+
+	var _GradeHeader = __webpack_require__(228);
+
+	var _GradeHeader2 = _interopRequireDefault(_GradeHeader);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -25205,8 +25221,6 @@
 	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-	var grades = [1, 2, 3, 4, 5];
 
 	var GradeSelector = function (_React$Component) {
 	  _inherits(GradeSelector, _React$Component);
@@ -25220,22 +25234,11 @@
 	  _createClass(GradeSelector, [{
 	    key: 'render',
 	    value: function render() {
-	      var gradeComponents = grades.map(function (grade, index) {
-	        return _react2.default.createElement(_Grade2.default, { key: index, grade: grade });
-	      });
 	      return _react2.default.createElement(
 	        'div',
-	        null,
-	        _react2.default.createElement(
-	          'div',
-	          { className: 'grades-header' },
-	          'elementary'
-	        ),
-	        _react2.default.createElement(
-	          'ul',
-	          { className: 'browse-grades' },
-	          gradeComponents
-	        )
+	        { className: 'grade-selector' },
+	        _react2.default.createElement(_GradeHeader2.default, null),
+	        _react2.default.createElement(_Grades2.default, null)
 	      );
 	    }
 	  }]);
@@ -25249,7 +25252,65 @@
 /* 226 */
 /***/ function(module, exports, __webpack_require__) {
 
-	"use strict";
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _Grade = __webpack_require__(227);
+
+	var _Grade2 = _interopRequireDefault(_Grade);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var GRADES = [{ label: 1 }, { label: 2 }, { label: 3 }, { label: 4 }, { label: 5 }];
+
+	var Grades = function (_React$Component) {
+	  _inherits(Grades, _React$Component);
+
+	  function Grades() {
+	    _classCallCheck(this, Grades);
+
+	    return _possibleConstructorReturn(this, Object.getPrototypeOf(Grades).apply(this, arguments));
+	  }
+
+	  _createClass(Grades, [{
+	    key: 'render',
+	    value: function render() {
+	      var grades = GRADES.map(function (grade, index) {
+	        return _react2.default.createElement(_Grade2.default, { grade: grade });
+	      });
+	      return _react2.default.createElement(
+	        'ul',
+	        { className: 'grades' },
+	        grades
+	      );
+	    }
+	  }]);
+
+	  return Grades;
+	}(_react2.default.Component);
+
+	exports.default = Grades;
+
+/***/ },
+/* 227 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
 
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
@@ -25279,12 +25340,14 @@
 	  }
 
 	  _createClass(Grade, [{
-	    key: "render",
+	    key: 'render',
 	    value: function render() {
+	      var grade = this.props.grade;
+
 	      return _react2.default.createElement(
-	        "li",
-	        { className: "grade-list-item" },
-	        "Grade " + this.props.grade
+	        'a',
+	        { className: 'grade', href: grade.url },
+	        'Grade ' + grade.label
 	      );
 	    }
 	  }]);
@@ -25295,7 +25358,33 @@
 	exports.default = Grade;
 
 /***/ },
-/* 227 */
+/* 228 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	var GradeHeader = function GradeHeader() {
+	  return _react2.default.createElement(
+	    'h2',
+	    { className: 'grade-select-header' },
+	    'elementary'
+	  );
+	};
+
+	exports.default = GradeHeader;
+
+/***/ },
+/* 229 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -25310,7 +25399,7 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _Book = __webpack_require__(228);
+	var _Book = __webpack_require__(230);
 
 	var _Book2 = _interopRequireDefault(_Book);
 
@@ -25351,7 +25440,7 @@
 	exports.default = BookContainer;
 
 /***/ },
-/* 228 */
+/* 230 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -25386,10 +25475,13 @@
 	  _createClass(Book, [{
 	    key: "render",
 	    value: function render() {
+	      var book = this.props.book;
+
 	      return _react2.default.createElement(
 	        "div",
 	        { className: "book" },
-	        this.props.book.title
+	        _react2.default.createElement("img", { src: book.imageUrl }),
+	        book.title
 	      );
 	    }
 	  }]);

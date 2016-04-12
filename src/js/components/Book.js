@@ -2,9 +2,11 @@ import React from 'react';
 
 export default class Book extends React.Component{
   render(){
+    var {props: {book: book}} = this;
     return(
       <div className="book">
-        {this.props.book.title}
+      <img src={book.imageUrl}/>
+        {book.title}
       </div>
     )
   }

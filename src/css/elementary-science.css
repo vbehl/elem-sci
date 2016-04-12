@@ -1,6 +1,39 @@
-.grades-header{
-	text-transform: uppercase;;
+body{
+	font-family: 'McLaren'
 }
-.grade-list-item{
+
+h2{
+	margin: 0;
+}
+
+ul{
 	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+.grade-selector{
+	border: 1px solid #efede7;
+	box-sizing: border-box;
+	width: 166px;
+}
+
+.grade-select-header{
+	background: #efede7;
+	color: #ffcc33;
+	font-size: 14px;
+	line-height: 35px;
+	padding-left: 15px;
+	text-transform: uppercase;
+}
+
+.grade{
+	color: #00aba4;
+	display: block;
+	line-height: 50px;
+	padding-left: 15px;
+}
+
+.grade:hover{
+		background: #cef1e8;
 }
